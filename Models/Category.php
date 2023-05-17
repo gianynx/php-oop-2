@@ -1,9 +1,7 @@
 <?php
-class Category
+class Category extends Product
 {
-    public $name;
-
-    public function __construct($name){
-        $this->name = $name;
+    public function __construct($id, $image, $title, $price, $category, $type){
+        parent::__construct($id, $image, $title, $price, $category, $type);
     }
 }
