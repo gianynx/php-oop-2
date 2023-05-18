@@ -1,10 +1,16 @@
 <?php
 trait Age
 {
-    public $age;
+    protected $age;
 
-    public function __construct(int $age)
-    {
+    public function setAge($age){
+        if (!is_int($age)){
+            throw new Exception("It isn't a number!");
+        }
         $this->age = $age;
+    }
+
+    public function getAge(){
+        return $this->age;
     }
 }
